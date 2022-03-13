@@ -15,7 +15,7 @@ namespace CoffeStar
         static void Main(string[] args)
         {
             BaseCustomerManager customerManager = new StarbucksCustomerManager(new MernisServiceAdapter());
-            customerManager.Save(new Customer { DateOfBirth = new DateTime(1996, 9, 8), Name = "?", Surname = "?" ,NationalityId="?"});//Insert your infos
+            customerManager.Save(new Customer { DateOfBirth = new DateTime(?), Name = "?", Surname = "?" ,NationalityId="?"});//Insert your infos
             Console.Read();
 
         }
