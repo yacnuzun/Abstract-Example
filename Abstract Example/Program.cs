@@ -10,14 +10,15 @@ namespace Abstract_Example
     {
         static void Main(string[] args)
         {
-            Ogretmen merve=new Merve();
-            Ogretmen yakup = new Yakup();
-            Ogrenci[] ogrencis=new Ogrenci[2];
+            Ogretmen aslı=new Aslı();
+            Ogretmen selim = new Selim();
+            Ogrenci yalcin=new Yalcin();
+            Ogrenci elif =new Elif();
+            aslı.Sor();
+            selim.Sor();
+            elif.Yaz();
+            yalcin.Yaz();
 
-            foreach (var item in ogrencis)
-            {
-                item.Yaz();
-            }
             Console.Read();
         }
     }
@@ -29,32 +30,32 @@ namespace Abstract_Example
     {
         abstract public void Sor();
     }
-    class Yalçın : Ogrenci
+    class Yalcin : Ogrenci
     {
         public override void Yaz()
         {
-            Console.WriteLine("Ben yazıyorum... Yalçın...");
+            Console.WriteLine("Ben yazıyorum...");
         }
     }
-    class Bilgovski : Ogrenci
+    class Elif : Ogrenci
     {
         public override void Yaz()
         {
-            Console.WriteLine("Ben yazdım bile hep öndeyim Ezik... Bilgovski..");
+            Console.WriteLine("Ben yazdım bile...");
         }
     }
-    class Yakup : Ogretmen
+    class Selim : Ogretmen
     {
         public override void Sor()
         {
-            Console.WriteLine("Arkadaşlar bitti mi Geçiyorum.. Yakup...");
+            Console.WriteLine("Arkadaşlar bitti mi Geçiyorum..");
         }
     }
-    class Merve : Ogretmen
+    class Aslı : Ogretmen
     {
         public override void Sor()
         {
-            Console.WriteLine("Yazdınız mı şekerler?? Mervoski..");
+            Console.WriteLine("Yazdınız mı arkadaşlar??");
         }
     }
 }
